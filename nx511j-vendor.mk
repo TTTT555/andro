@@ -25,6 +25,7 @@ PRODUCT_COPY_FILES += \
     vendor/nubia/nx511j/proprietary/etc/firmware/venus.mdt:system/etc/firmware/venus.mdt
 PRODUCT_COPY_FILES += \
     vendor/nubia/nx511j/proprietary/bin/adsprpcd:system/bin/adsprpcd \
+    vendor/nubia/nx511j/proprietary/bin/akmd09911:system/bin/akmd09911 \
     vendor/nubia/nx511j/proprietary/bin/btnvtool:system/bin/btnvtool \
     vendor/nubia/nx511j/proprietary/bin/hci_qcomm_init:system/bin/hci_qcomm_init \
     vendor/nubia/nx511j/proprietary/bin/irsc_util:system/bin/irsc_util \
@@ -61,6 +62,7 @@ PRODUCT_COPY_FILES += \
     vendor/nubia/nx511j/proprietary/etc/permissions/qcrilhook.xml:system/etc/permissions/qcrilhook.xml \
     vendor/nubia/nx511j/proprietary/framework/com.qti.snapdragon.sdk.display.jar:system/framework/com.qti.snapdragon.sdk.display.jar \
     vendor/nubia/nx511j/proprietary/lib/hw/camera.msm8916.so:system/lib/hw/camera.msm8916.so \
+    vendor/nubia/nx511j/proprietary/lib/hw/sensors.msm8916.so:system/lib/hw/sensors.msm8916.so \
     vendor/nubia/nx511j/proprietary/lib/libmm-qcamera.so:system/lib/libmm-qcamera.so \
     vendor/nubia/nx511j/proprietary/lib/libmmcamera_interface.so:system/lib/libmmcamera_interface.so \
     vendor/nubia/nx511j/proprietary/lib/libmmjpeg_interface.so:system/lib/libmmjpeg_interface.so \
@@ -75,6 +77,7 @@ PRODUCT_COPY_FILES += \
     vendor/nubia/nx511j/proprietary/lib/libobjectclear_nubia.so:system/lib/libobjectclear_nubia.so \
     vendor/nubia/nx511j/proprietary/lib/libqomx_core.so:system/lib/libqomx_core.so \
     vendor/nubia/nx511j/proprietary/lib/librmnetctl.so:system/lib/librmnetctl.so \
+    vendor/nubia/nx511j/proprietary/lib64/hw/sensors.msm8916.so:system/lib64/hw/sensors.msm8916.so \
     vendor/nubia/nx511j/proprietary/lib64/libAlgorithm.so:system/lib64/libAlgorithm.so \
     vendor/nubia/nx511j/proprietary/lib64/libBuffer.so:system/lib64/libBuffer.so \
     vendor/nubia/nx511j/proprietary/lib64/libFNVfbEngineLib.so:system/lib64/libFNVfbEngineLib.so \
