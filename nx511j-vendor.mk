@@ -398,7 +398,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_VENDOR_PATH)/lib64/libulp2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libulp2.so \
     $(LOCAL_VENDOR_PATH)/lib64/libxtadapter.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libxtadapter.so \
     $(LOCAL_VENDOR_PATH)/lib64/libxtwifi_ulp_adaptor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libxtwifi_ulp_adaptor.so \
-    $(LOCAL_VENDOR_PATH)/lib64/vendor.qti.gnss@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.gnss@1.0.so
+    $(LOCAL_VENDOR_PATH)/lib64/vendor.qti.gnss@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.gnss@1.0.so \
+    $(LOCAL_VENDOR_PATH)/lib64/libqdma_file_agent.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqdma_file_agent.so
 
 # ANT-blobs (kang from xiaomi_msm8953-common)
 PRODUCT_COPY_FILES += \
@@ -424,7 +425,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_VENDOR_PATH)/lib/libllvm-qgl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libllvm-qgl.so \
     $(LOCAL_VENDOR_PATH)/lib64/libllvm-qgl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libllvm-qgl.so
 
-# Add prebuilt libraries from /system for GSI
+# Add missing prebuilt libraries from /system for Lineage OS based GSIs
 PRODUCT_COPY_FILES += \
     $(LOCAL_VENDOR_GSI_PATH)/lib/libaudioroute.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaudioroute.so \
     $(LOCAL_VENDOR_GSI_PATH)/lib64/libaudioroute.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaudioroute.so \
@@ -447,7 +448,29 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_VENDOR_GSI_PATH)/lib64/android.hardware.wifi.supplicant@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.wifi.supplicant@1.1.so \
     $(LOCAL_VENDOR_GSI_PATH)/lib64/android.hardware.wifi.hostapd@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.wifi.hostapd@1.0.so
 
-    
+# Add missing prebuilt libraries from /system for AOSP based GSIs
+PRODUCT_COPY_FILES += \
+    $(LOCAL_VENDOR_GSI_PATH)/lib64/libbfqio.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbfqio.so \
+    $(LOCAL_VENDOR_GSI_PATH)/lib/vendor.lineage.power@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.lineage.power@1.0.so \
+    $(LOCAL_VENDOR_GSI_PATH)/lib64/vendor.lineage.power@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.lineage.power@1.0.so \
+    $(LOCAL_VENDOR_GSI_PATH)/lib/vendor.lineage.camera.motor@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.lineage.camera.motor@1.0.so \
+    $(LOCAL_VENDOR_GSI_PATH)/lib64/vendor.lineage.camera.motor@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.lineage.camera.motor@1.0.so \
+    $(LOCAL_VENDOR_GSI_PATH)/lib/android.hardware.radio@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.radio@1.0.so \
+    $(LOCAL_VENDOR_GSI_PATH)/lib64/android.hardware.radio@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.radio@1.0.so \
+    $(LOCAL_VENDOR_GSI_PATH)/lib/android.hardware.radio@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.radio@1.1.so \
+    $(LOCAL_VENDOR_GSI_PATH)/lib64/android.hardware.radio@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.radio@1.1.so
+
+# Add Legacy HAL1 Camera's prebuilt libraries from /system for GSIs (it will be enabled with adaptation patch)
+PRODUCT_COPY_FILES += \
+    $(LOCAL_VENDOR_GSI_PATH)/bin/mediaserver:$(TARGET_COPY_OUT_VENDOR)/bin/mediaserver \
+    $(LOCAL_VENDOR_GSI_PATH)/lib/libcameraservice.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcameraservice.so \
+    $(LOCAL_VENDOR_GSI_PATH)/lib64/libcameraservice.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcameraservice.so \
+    $(LOCAL_VENDOR_GSI_PATH)/lib/libstagefright_omx.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_omx.so \
+    $(LOCAL_VENDOR_GSI_PATH)/lib64/libstagefright_omx.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefright_omx.so \
+    $(LOCAL_VENDOR_GSI_PATH)/lib/libstagefright_omx_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_omx_utils.so \
+    $(LOCAL_VENDOR_GSI_PATH)/lib64/libstagefright_omx_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefright_omx_utils.so
+
+
 
 PRODUCT_PACKAGES += \
     libloc_api_v02 \
