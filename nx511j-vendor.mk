@@ -446,7 +446,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_VENDOR_GSI_PATH)/lib64/android.hardware.wifi@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.wifi@1.2.so \
     $(LOCAL_VENDOR_GSI_PATH)/lib64/android.hardware.wifi.supplicant@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.wifi.supplicant@1.0.so \
     $(LOCAL_VENDOR_GSI_PATH)/lib64/android.hardware.wifi.supplicant@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.wifi.supplicant@1.1.so \
-    $(LOCAL_VENDOR_GSI_PATH)/lib64/android.hardware.wifi.hostapd@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.wifi.hostapd@1.0.so
+    $(LOCAL_VENDOR_GSI_PATH)/lib64/android.hardware.wifi.hostapd@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.wifi.hostapd@1.0.so \
+    $(LOCAL_VENDOR_GSI_PATH)/lib/libfmjni.so:$(TARGET_COPY_OUT_VENDOR)/lib/libfmjni.so \
+    $(LOCAL_VENDOR_GSI_PATH)/lib64/libfmjni.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfmjni.so
 
 # Add missing prebuilt libraries from /system for AOSP based GSIs
 PRODUCT_COPY_FILES += \
