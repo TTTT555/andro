@@ -462,6 +462,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_VENDOR_GSI_PATH)/lib/android.hardware.radio@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.radio@1.1.so \
     $(LOCAL_VENDOR_GSI_PATH)/lib64/android.hardware.radio@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.radio@1.1.so
 
+# Add missing prebuilt libraries from /system for Pixel Experience based GSIs (Havoc, Arrow, Evolution-X)
+PRODUCT_COPY_FILES += \
+    $(LOCAL_VENDOR_GSI_PATH)/lib64/libnl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnl.so
+
 # Add Legacy HAL1 Camera's prebuilt libraries from /system for GSIs (it will be enabled with adaptation patch)
 PRODUCT_COPY_FILES += \
     $(LOCAL_VENDOR_GSI_PATH)/bin/mediaserver:$(TARGET_COPY_OUT_VENDOR)/bin/mediaserver \
